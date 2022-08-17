@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "author": "Open Bionics",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 150, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn",
+      "top": 14.65,
+      "left": 28,
+      "attrs": { "color": "black", "key": "1", "bounce": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-red",
+      "top": -30,
+      "left": 165,
+      "attrs": { "color": "red", "label": "Single Press" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-green",
+      "top": -30,
+      "left": 200,
+      "attrs": { "color": "green", "label": "Double Press" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-blue",
+      "top": -30,
+      "left": 235,
+      "attrs": { "color": "blue", "label": "Short Hold" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-yellow",
+      "top": -30,
+      "left": 270,
+      "attrs": { "color": "yellow", "label": "Long Hold" }
+    }
+  ],
+  "connections": [
+    [ "btn:1.l", "uno:GND.1", "black", [ "h-15", "v123.72", "h100.5" ] ],
+    [ "uno:GND.1", "led-red:C", "black", [ "v-12", "*", "h-8", "v4" ] ],
+    [ "uno:GND.1", "led-green:C", "black", [ "v-12", "*", "h-8", "v4" ] ],
+    [ "uno:GND.1", "led-blue:C", "black", [ "v-12", "*", "h-15", "v4" ] ],
+    [ "uno:GND.1", "led-yellow:C", "black", [ "v-12", "*", "h-15", "v4" ] ],
+    [ "btn:2.r", "uno:12", "magenta", [ "h0" ] ],
+    [ "led-red:A", "uno:7", "red", [ "v0" ] ],
+    [ "led-green:A", "uno:6", "green", [ "v46.04", "h-25.5" ] ],
+    [ "led-blue:A", "uno:5", "blue", [ "v73.37", "h-51" ] ],
+    [ "led-yellow:A", "uno:4", "yellow", [ "v90.7", "h-76.5" ] ]
+  ]
+}
